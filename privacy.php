@@ -14,7 +14,7 @@
 <body>
 <div id="wrapper">
     <div id="page">
-    	<div id="logo"><img src="assets/draglogo.png" /></div><br /><br />
+    	<div id="logo"><img src="assets/draglogo.png" /></div><br /><br /><br />
         <div class="backtomain"><a href="index.php">Back to Dragit.in</a></div>
     	<br />
     	<h1>Privacy Policy</h1>

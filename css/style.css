@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 html { 
-  font-family: 'Electrolize', sans-serif;
-  background:#55778a;
+  font-family: 'Oswald', sans-serif;
+  background:#323232;
   /*
   background:#55778a url(../assets/bg.jpg) no-repeat center fixed;
   background-size: 100% auto;
@@ -13,13 +13,18 @@ body {
   line-height: 18px;
 }
 a {
-  color: #B5CDDA;
+  color: #919191;
   text-decoration: none;
 }
 a:hover,
 .active a {
   color: #7F7F7F;
   text-decoration: none;
+}
+p {
+display: block;
+-webkit-margin-before: 0px;
+-webkit-margin-after: 0px;
 }
 td {
   padding: none;
@@ -28,10 +33,10 @@ img {
   border: 0;
 }
 input, textarea {
-  background-color: #27373F;
-  font-family: 'Electrolize', sans-serif;
+  font-family: 'Oswald', sans-serif;
+  background-color: #9f9f9f;
   border: 2px solid #1C272D;
-  color: #BCBCBC;
+  color: #323232;
   padding: 3px;
   font-size: 14px;
 }
@@ -42,17 +47,17 @@ input, textarea {
   color: #9E9E9E;
   margin-right: auto;
   margin-left: auto;
-  width: 100%;
+  width: 980px;
 }
 #logo {
   float: left;
 }
 #dragit_note {
-  width: 600px;
+  width: 700px;
   height: 21px;
   margin-left: auto;
   margin-right: auto;
-  background:url(../assets/dragit_note.png) no-repeat;
+  font-size: 26px;
   margin-bottom: 10px;
 }
 .table {
@@ -62,9 +67,10 @@ input, textarea {
   margin-left: auto;
 }
 .row {
-  width: 600px;
+  width: 700px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 5px;
 }
 .row:before, .row:after {
   display: table;
@@ -78,7 +84,8 @@ input, textarea {
   float: right;
   padding-right: 10px;
   font-size: 14px;
-  color: #191919;
+  color: #919191;
+  margin-top: 55px;
 }
 td.delete {
   white-space: nowrap;
@@ -97,34 +104,65 @@ td.delete {
 .image_urls {
   padding-left: 5px; 
   font-size: 14px;
-  border-bottom: 1px solid #486576;
+  border-bottom: 1px solid #444;
   color: #D8D8D8;
   padding-top: 2px;
   padding-bottom: 2px;
 }
 #url_shorten {
-  width: 600px;
-  margin-right: auto;
-  margin-left: auto;
+  width: 470px;
+  color: #e49100;
   margin-top: 50px;
   padding-top: 5px;
+  font-size: 21px;
+  float: left;
+}
+#preMessage {
+  color: #e49100;
+  font-size: 36px;
+  margin-bottom: 10px;
 }
 #message {
-  color: #191919;
-  font-size: 26px;
+  color: #e49100;
+  font-size: 24px;
+  margin-top: 10px;
+}
+.urlSubmit {
+  float: right;
+  margin-right: 2px;
+  margin-top: 5px;
+}
+.bottomAd {
+  position: relative;
+  width: 468px;
+  margin-top: 10px;
+  float: left;
+}
+.boxAd {
+  position: relative;
+  width: 300px;
+  margin-top: 5px;
+  margin-left: 5px;
+  float: right;
+}
+#footer {
+  width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
 }
 input.urlfield {
   font-size: 19px;
-  font-family: 'Electrolize', sans-serif;
-  background-color: #27373F;
+  font-family: 'Oswald', sans-serif;
+  background-color: #e49100;
 }
 input.urlfield:focus {
-  background-color: #192328;
+  background-color: #9f9f9f;
 }
 input.urlbutton {
-  font-family: 'Electrolize', sans-serif;
+  font-family: 'Oswald', sans-serif;
   width:85px;
-  background:#27373F;
+  background:#3d3d3d;
   color:#BCBCBC;
   height:30px;
   -webkit-border-radius: 10px;
@@ -134,12 +172,12 @@ input.urlbutton {
   font-size: 18px;
 }
 input.urlbutton:hover {
-  background:#192328;
+  background:#272727;
   color:#fff;
 }
 .ui-button .ui-button-text {
 line-height: 1;
-font-family: 'Electrolize', sans-serif;
+font-family: 'Oswald', sans-serif;
 }
 .name {
   border-bottom: 1px solid #486576;
@@ -150,7 +188,7 @@ font-family: 'Electrolize', sans-serif;
   border-bottom: 1px solid #486576;
 }
 .preview {
-  border-bottom: 1px solid #486576;
+  border-bottom: 1px solid #444;
   padding-left: 3px;
   padding-top: 3px;
 }
@@ -175,7 +213,8 @@ font-family: 'Electrolize', sans-serif;
 .info {
   background:url(../assets/file_bg.png) repeat;
   padding: 5px;
-  color:#fff;
+  color:#ababab;
+  line-height: 22px;
 }
 .backtomain {
   width: 300px;
@@ -183,13 +222,6 @@ font-family: 'Electrolize', sans-serif;
   margin-left: auto;
   margin-top: 50px;
   font-size: 28px;
-}
-#bottomAd {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  width: 468px;
-  margin-top: 15px;
 }
 #siteterms {
   float: right;

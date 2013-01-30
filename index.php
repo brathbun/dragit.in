@@ -17,7 +17,7 @@ if (isset($_GET['code']) && !empty($_GET['code'])) {
 <meta name="description" content="dragit.in allows quick sharing of images and links for social networks and online communities." />
 <meta name="keywords" content="images, funny pictures, image host, image upload, image sharing, image resize" />
 <meta name="viewport" content="width=device-width">
-<link href='http://fonts.googleapis.com/css?family=Electrolize' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
 <!-- jQuery UI styles -->
 <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/themes/base/jquery-ui.css" id="theme">
 <!-- jQuery Image Gallery styles -->
@@ -124,7 +124,7 @@ function SelectAll()
             </div>
             <!-- The loading indicator is shown during file processing -->
             <!--<div class="fileupload-loading"></div>-->
-            <div id="dragit_note"></div>
+            <div id="dragit_note">Host pics by dragging them to this window, or use "Add Images"</div>
             <!-- The table listing the files available for upload/download -->
             <table role="presentation" class="table table-striped"><tbody class="files" data-toggle="modal-gallery" data-target="#modal-gallery">
             </tbody></table>
@@ -173,13 +173,13 @@ function SelectAll()
 
             <td class="image_urls">
                 <div id="linksRow1">
-                <div id="copyLinkButton">Direct Link <input type="text" id="imageLink" onclick="this.select();" size="24" value="http://dragit.in/{%=file.name%}"/></div>
-                <div id="copyHTMLButton">HTML Tag <input type="text" id="HTMLLink" onclick="this.select();" size="24" value='<a href="http://dragit.in/{%=file.name%}"><img src="http://dragit.in/{%=file.name%}" alt="" title="Dragit.in Hosted" /></a>'/></div><br />
+                <div id="copyLinkButton">Direct Link <input type="text" id="imageLink" onclick="this.select();" size="35" value="http://dragit.in/{%=file.name%}"/></div>
+                <div id="copyHTMLButton">HTML Tag <input type="text" id="HTMLLink" onclick="this.select();" size="35" value='<a href="http://dragit.in/{%=file.name%}"><img src="http://dragit.in/{%=file.name%}" alt="" title="Dragit.in Hosted" /></a>'/></div><br />
                 </div>
 
                 <div id="linksRow1">
-                <div id="copyForumButton">Forum Tag <input type="text" id="forumLink" onclick="this.select();" size="24" value="[img]http://dragit.in/{%=file.name%}[/img]"/></div>
-                <div id="copyForumURLButton">Forum Link <input type="text" id="forumURLLink" onclick="this.select();" size="23" value="[URL=http://dragit.in/{%=file.name%}][img]http://dragit.in/{%=file.name%}[/img][/URL]"/></div>
+                <div id="copyForumButton">Forum Tag <input type="text" id="forumLink" onclick="this.select();" size="35" value="[img]http://dragit.in/{%=file.name%}[/img]"/></div>
+                <div id="copyForumURLButton">Forum Link <input type="text" id="forumURLLink" onclick="this.select();" size="34" value="[URL=http://dragit.in/{%=file.name%}][img]http://dragit.in/{%=file.name%}[/img][/URL]"/></div>
                 </div>
             </td>
         {% } %}
@@ -216,26 +216,41 @@ function SelectAll()
 <script src="js/main.js"></script>
 <!-- The XDomainRequest Transport is included for cross-domain file deletion for IE8+ -->
 <!--[if gte IE 8]><script src="js/cors/jquery.xdr-transport.js"></script><![endif]-->
+<div id="footer">
+    <div id="url_shorten">
+        <div id="preMessage">or enter URL to shorten</div>
+        
+        <input type="text" class="urlfield" name="url" id="url" size="63" onkeydown="if (event.keyCode == 13 || event.which == 13) { go($('#url').val()); }" />
+        <div class="urlSubmit"><input type="button" class="urlbutton" value="Shorten" onclick="go($('#url').val());" /></div>
+        
+        <div id="message"></div>    
+        
+        <div class="bottomAd">
+            <script type="text/javascript"><!--
+            google_ad_client = "ca-pub-6700098113284988";
+            google_ad_slot = "6820720582";
+            google_ad_width = 468;
+            google_ad_height = 60;
+            //-->
+            </script>
+            <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+        </div>
 
-<div id="url_shorten">
-    <img src="assets/url_words.png" />
-    
-    <input type="text" class="urlfield" name="url" id="url" size="60" onkeydown="if (event.keyCode == 13 || event.which == 13) { go($('#url').val()); }" />
-    <input type="button" class="urlbutton" value="Shorten" onclick="go($('#url').val());" />
-    
-    <div id="message"></div>    
-</div>
-<div id="bottomAd">
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-6700098113284988";
-/* Dragit.in */
-google_ad_slot = "6820720582";
-google_ad_width = 468;
-google_ad_height = 60;
-//-->
-</script>
-<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
-</div>
+    </div>
+
+    <div class="boxAd">
+        <script type="text/javascript"><!--
+        google_ad_client = "ca-pub-6700098113284988";
+        google_ad_slot = "6801237380";
+        google_ad_width = 300;
+        google_ad_height = 250;
+        //-->
+        </script>
+        <script type="text/javascript"
+        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+        </script>
+    </div>
+<div>
 
 <div id="siteterms"><a href="terms.php">Terms</a> <a href="privacy.php">Privacy</a></div>
 
